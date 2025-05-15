@@ -1,0 +1,11 @@
+.navbar-css {
+    background-color: #F70D1A;
+    margin-bottom: 3em;
+}
+
+.navbar-css .navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 100%;
+}
