@@ -12,7 +12,7 @@ return(
     <div>
         <Navbar expand="lg" className="navbar-css">
             <Container>
-                <Navbar.Brand>Pokéverse | All Pokémon</Navbar.Brand>
+                <Navbar.Brand data-test="header-Title">Pokéverse | All Pokémon</Navbar.Brand>
                 <Button style={{ backgroundColor: '#3abb43' }} className="squad-button" disabled={squadList.length < 2}>Battle</Button>
             </Container>
         </Navbar>

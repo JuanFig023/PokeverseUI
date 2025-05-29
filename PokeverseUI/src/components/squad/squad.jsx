@@ -11,10 +11,10 @@ const handleSquadDelete = (pokemonToDelete) => {
 
 return (
     <div>
-        <h1>Your Squad!</h1>
-        <Row xs={1} md={2} lg={5} className="g-3 justify-content-center" style={{ marginBottom: '20px', marginTop: '20px' }}>
+        <h1 data-test="squad-Title">Your Squad!</h1>
+        <Row xs={1} md={2} lg={5} className="g-3 justify-content-center" style={{ marginBottom: '20px', marginTop: '20px' }} data-test="squad-List">
         {squadList.map((pokemonSquad, index) => (
-            <Card key={index} style={{ width: '13rem', backgroundColor: '#fffccf' }}>
+            <Card key={index} style={{ width: '13rem', backgroundColor: '#fffccf' }} data-test={`squad-Card${pokemonSquad.id}`}>
                 <Card.Img variant="top" src={pokemonSquad.sprites.front_default} alt={pokemonSquad.name} />
                     <Card.Body>
                         <Card.Title>{pokemonSquad.name}</Card.Title>
