@@ -52,16 +52,16 @@ function PokemonList( { setSquadList }) {
 return(        
     <div>  
         <h1>Pokémon List</h1>
-        <Row xs={1} md={2} lg={5} className="g-3 justify-content-center" style={{ marginTop: '20px' }}>
+        <Row xs={1} md={2} lg={5} className="g-3 justify-content-center" style={{ marginTop: '20px' }} data-test="Pokemon-List">
         {detailedPokemonList.map((pokemon, index) => (
-            <Card key={index} style={{ width: '13rem', backgroundColor: '#fffccf' }}>
+            <Card key={index} style={{ width: '13rem', backgroundColor: '#fffccf' }} data-test={`pokemon-Card${pokemon.id}`}>
                 <Card.Img variant="top" src={pokemon.sprites.front_default} alt={pokemon.name} />
                     <Card.Body>
                         <Card.Title>{pokemon.name}</Card.Title>
                         <Card.Text>
                             {pokemon.moves[0].move.name}
                         </Card.Text>
-                        <Button variant="primary" onClick={() => handleAddToSquad(pokemon)} style={{ fontWeight: 'bold'}}>Add</Button>
+                        <Button variant="primary" onClick={() => handleAddToSquad(pokemon)} style={{ fontWeight: 'bold'}} data-test={`button${pokemon.id}`}>Add</Button>
                     </Card.Body>
             </Card>
         ))}
