@@ -15,7 +15,7 @@ describe('Pokeverse Cypress Test', () => {
     cy.get('[data-test^="pokemon-Card"]').should('exist');
   })
 
-  it.only('Adds a Pokemon to the squad', () => {
+  it('Adds a Pokemon to the squad', () => {
     cy.get('[data-test="button1"]').click({force: true})
 
     cy.get('[data-test="squad-Title"]').should('exist')
